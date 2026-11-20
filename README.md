@@ -1,42 +1,69 @@
-Vererbung in JAVA
+# Vererbung in Java
 
-1. Lernziele
-   - Vererbung implementieren
+## 1. Lernziele
 
-2. Aufgabenstellung
+- Vererbung implementieren
 
-Erstelle eine Basisklasse Person, von welcher die Klasse Employee abgeleitet werden soll.
+## 2. Aufgabenstellung
 
-Klassendiagramm:
+Erstelle eine Basisklasse `Person`, von welcher die Klasse
+`Employee` abgeleitet werden soll.
 
-Person
---------------------------------
-- name: String
-- firstName: String
-+ age: int
---------------------------------
-+ Person(ln:String, fn:String)
-+ Person()
-+ setName(ln:String, fn:String)
-+ fullName(): String
+### 2.1 Klassendiagramm
 
-Employee
---------------------------------
-- employeeId: String
---------------------------------
-+ Employee(ln:String, fn:String,
-           empId:String, a:int)
-+ getEmployeeId() String
-+ printAll()
+#### Person
 
-Employee besitzt die öffentlichen Eigenschaften von Person.
+**Attribute:**
 
-Die Klasseneigenschaften und Methoden entnimm dem Klassendiagramm.
+| Name        | Datentyp |
+|-------------|----------|
+| `name`      | `String` |
+| `firstName` | `String` |
+| `age`       | `int`    |
 
-Es sollen sämtliche Methoden ausprogrammiert werden.
+**Konstruktoren und Methoden:**
 
-Erweitere die Mitarbeiter (Employee) Klasse um die Eigenschaften:
-- SupervisorID
-- Salary
+| Methode                              | Rückgabetyp |
+|--------------------------------------|-------------|
+| `Person(ln: String, fn: String)`      | –           |
+| `Person()`                           | –           |
+| `setName(ln: String, fn: String)`     | `void`      |
+| `fullName()`                         | `String`    |
 
-und die Methoden: set/get für beides und eine Methode salaryIncrease(float).
+#### Employee (erbt von Person)
+
+**Attribute:**
+
+| Name         | Datentyp |
+|--------------|----------|
+| `employeeId` | `String` |
+
+**Konstruktoren und Methoden:**
+
+| Methode                                                           | Rückgabetyp |
+|-------------------------------------------------------------------|-------------|
+| `Employee(ln: String, fn: String, empId: String, a: int)`           | –           |
+| `getEmployeeId()`                                                 | `String`    |
+| `printAll()`                                                      | `void`      |
+
+### 2.2 Anforderungen
+
+- `Employee` besitzt die öffentlichen Eigenschaften von `Person`.
+- Die Klasseneigenschaften und Methoden sind dem Klassendiagramm
+  zu entnehmen.
+- Sämtliche Methoden sollen ausprogrammiert werden.
+
+### 2.3 Erweiterung
+
+Erweitere die Klasse `Employee` um folgende Eigenschaften:
+
+- `SupervisorID`
+- `Salary`
+
+Implementiere zusätzlich folgende Methoden:
+
+- `setSupervisorID()`
+- `getSupervisorID()`
+- `setSalary()`
+- `getSalary()`
+- `salaryIncrease(float)`
